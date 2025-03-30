@@ -13,9 +13,9 @@ Before integrating your device, contact the Node Admin to add your IoT device da
 Sign up on one of the Fides Innova IoT servers (e.g. https://panel.zksensor.tech) to obtain your credentials.
 
 ### 3. Install the Device Using API Requests
-Use the Fides Innova API to register your device on the IoT server witch your device is registered on.
-#### 3.1 POST request
-Using the following APIs you can install your IoT Device on the IoT Node.
+Use the Fides Innova API to register your device on the IoT server on which your device is registered.
+#### 3.1 Registration APIs
+Using the following POST requests, you can install your IoT Device on the IoT server.
 ```
 /v1/user/credential
 # Use the accessToken from response ["data"]["tokens"]["accessToken"] for other API requests
