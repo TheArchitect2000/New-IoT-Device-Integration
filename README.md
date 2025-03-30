@@ -1,4 +1,4 @@
-# IoT Device Integration with Fides Innova
+# New IoT Device Integration with Fides Innova IoT Server (Siemens IOT2050, Raspberry Pi)
 This guide explains the process of integrating your IoT devices with the **Fides Innova** platform, allowing you to send, monitor, and manage your device data efficiently.
 
 - An IoT device capable of HTTP/API and MQTT communication.
