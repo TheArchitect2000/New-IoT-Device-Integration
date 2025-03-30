@@ -10,12 +10,12 @@ This guide explains the process of integrating your IoT devices with the **Fides
 Before integrating your device, contact the Node Admin to add your IoT device data on the Fides Innova node.
 
 ### 2. Create an Account on Fides Innova
-Sign up on the Fides Innova Platform to obtain your credentials.
+Sign up on the Fides Innova Platform (e.g. https://panel.zksensor.tech) to obtain your credentials.
 
 ### 3. Install the Device Using API Requests
 Use the Fides Innova API to register your device.
 #### 3.1 POST request
-Using the following APIs you can install your IoT Device.
+Using the following APIs you can install your IoT Device on the IoT Node witch your device is registered on.
 ```
 /v1/user/credential
 # Use the accessToken from response ["data"]["tokens"]["accessToken"] for other API requests
@@ -375,7 +375,7 @@ Once registered, your device can publish data via MQTT. Use the following connec
 
 ### 5. Monitor Your Data
 Access your device data via:
-- **Web App:** Fides Innova Dashboard (e.g. https://panel.motioncertified.online)
+- **Web App:** Fides Innova Dashboard (e.g. https://panel.zksensor.tech)
 - **Mobile App:** Available on [Google Play](https://play.google.com/store/apps/details?id=io.fidesinnova.front) / [App Store](https://apps.apple.com/ca/app/fidesinnova/id6477492757)
 
 ## Troubleshooting
