@@ -22,7 +22,24 @@ Using the following APIs you can install your IoT Device.
 
 /v1/device/insert
 # To install the device in your account
+```
 
+To register the device information during installation, include the following fields in the POST body as a JSON payload:
+```
+// Sample
+{
+    "deviceName": "Device Name",         // String
+    "deviceType": "Device Type",         // String
+    "mac": "Device base64 MAC address",  // String (base64 encoded)
+    "hardwareVersion": 1,                // int32_t (example value)
+    "firmwareVersion": 1,                // int32_t (example value)
+    "parameters": [
+        {"title": "Temperature", "UI": "text", "unit": "C"},
+        {"title": "Humidity",    "UI": "text", "unit": "%"},
+        {"title": "Time",        "UI": "text", "unit": 0}
+    ],
+    "isShared": false                    // boolean
+}
 ```
 
 #### 3.2 Example of API request:
