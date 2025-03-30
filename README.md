@@ -358,8 +358,8 @@ Once registered, your device can publish data via MQTT. Use the following connec
 
 ### 5. Monitor Your Data
 Access your device data via:
-Web App: Fides Innova Dashboard
-Mobile App: Available on Google Play / App Store
+- **Web App:** Fides Innova Dashboard (e.g. https://panel.motioncertified.online)
+- **Mobile App:** Available on [Google Play](https://play.google.com/store/apps/details?id=io.fidesinnova.front) / [App Store](https://apps.apple.com/ca/app/fidesinnova/id6477492757)
 
 ## Troubleshooting
 - Ensure your device has internet access.
