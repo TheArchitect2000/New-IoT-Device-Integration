@@ -1,31 +1,37 @@
 # IoT Device Integration with Fides Innova
 This guide explains the process of integrating your IoT devices with the **Fides Innova** platform, allowing you to send, monitor, and manage your device data efficiently.
 
-## Prerequisites
 - An IoT device capable of HTTP/API and MQTT communication.
-- Approval from the Node Admin to add your device info.
 
-## Steps for Integration
-### 1. Request Device Addition to the Node
-Before integrating your device, contact the Node Admin to add your IoT device data on the Fides Innova node.
+- Contact the IoT node (e.g. https://panel.zksensor.tech) administrator and request adding your device type to the devices.json file on the IoT server. Please refer to the iot-server GitHub respository to learn how to add a new device type to the IoT server (https://github.com/TheArchitect2000/iot-server?tab=readme-ov-file#b4-device-configuration-file).
 
-### 2. Create an Account on Fides Innova
-Sign up on one of the Fides Innova IoT servers (e.g. https://panel.zksensor.tech) to obtain your credentials.
+- Sign up on the IoT server to create a user new account.
 
-### 3. Install the Device Using API Requests
-Use the Fides Innova API to register your device on the IoT server where it is configured.
-You can install your IoT device on the IoT server by making the following POST requests:
+-  Register your device on the IoT server using the following API. You first need to obtain an access token, and then, do the registeration.
 ```
-/v1/user/credential
-# Use the accessToken from response ["data"]["tokens"]["accessToken"] for other API requests
+API URL: https://panel.zksensor.tech/app/v1/user/credential
+POST body format: {"email": "string", "password": "string"}
+API respnse: obtain the accessToekn from the received json; ["data"]["tokens"]["accessToken"]
 
-/v1/device/insert
-# To install the device in your account
+API URL: https://panel.zksensor.tech/app/v1/device/insert
+POST body format: {
+  "deviceName": "string",
+  "deviceType": "string",
+  "mac": "string",
+  "hardwareVersion": int32_t,
+  "firmwareVersion": int32_t,
+  "parameters": [
+    "string"
+  ],
+  "isShared": bool,
+  "location": "string",
+  "geometry": "string"
+}
+API respnse: 
 ```
 
-To register the device information during installation, include the following fields in the POST body as a JSON payload:
+- Sample of POST body JSON payload for 'insert' API call:
 ```
-// Sample
 {
     "deviceName": "Device Name",         // String
     "deviceType": "Device Type",         // String
@@ -41,8 +47,7 @@ To register the device information during installation, include the following fi
 }
 ```
 
-
-This is an example of the implementation of the API POST request using C++ for Siemens IOT2050
+- This is an example of the implementation of the API POST request using C++ for Siemens IOT2050 device:
 `install_device.cpp`
 ```
 // Copyright 2025 Fidesinnova.
