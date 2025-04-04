@@ -17,8 +17,8 @@ The program retrieves the MAC address, which requires root privileges:
 sudo ./install_device
 ```
 ### Expected Workflow
-- 1. The program lists available nodes from `nodes.json`.
+1. The program lists available nodes from `nodes.json`.
 
-- 2. You select a node and provide login credentials (email & password).
+2. Select a node and provide login credentials (email & password).
 
-- 3. If successful, it registers the device and saves the broker URL in `broker_host.txt`.
+3. If successful, it registers the device and saves the broker URL in `broker_host.txt`.
