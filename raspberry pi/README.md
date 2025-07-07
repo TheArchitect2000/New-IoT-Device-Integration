@@ -11,6 +11,18 @@ Use `g++` with C++17 support and link `libcurl`:
 ```
 g++ -std=c++17 install_device.cpp -o install_device -lcurl
 ```
+## Adding a Node
+To add another node during the installation process, add the new node entry to the `nodes.json` file in this folder.
+
+Here’s a sample entry for the JSON:
+```
+{
+    "Name": "YOUR_NODE_NAME",
+    "MQTT": "panel.YOUR_NODE_URL",
+    "API": "panel.YOUR_NODE_URL/app"
+}
+```
+
 ## Run the Program
 The program retrieves the MAC address, which requires root privileges:
 ```
