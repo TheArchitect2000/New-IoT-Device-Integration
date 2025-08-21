@@ -114,7 +114,7 @@ start\rINF\r{"Type":"E-CARD","HV":"1.0","FV":"2.3","parameters":[{"title":"Tempe
 ```
 #### 📌 The `ui` Field Explanation
 
-The `ui` field tells the client how to represent the parameter in the user interface.
+The `ui` field tells the mobile app how to represent the parameter in the user interface.
 Allowed values:
 
 - `text` → Read-only text display (e.g., temperature, humidity).
