@@ -112,6 +112,18 @@ start\rINF\r{...JSON...}\rend
 ```
 start\rINF\r{"Type":"E-CARD","HV":"1.0","FV":"2.3","parameters":[{"title":"Temperature","ui":"text","unit":"°C"},{"title":"Humidity","ui":"text","unit":"%"},{"title":"Button","ui":"text","unit":null}]}\rend
 ```
+#### 📌 The `ui` Field Explanation
+
+The `ui` field tells the client how to represent the parameter in the user interface.
+Allowed values:
+
+- `text` → Read-only text display (e.g., temperature, humidity).
+
+- `toggle_switch` → A switch that can be toggled ON/OFF.
+
+- `push_button` → A button that can be pressed once (momentary action).
+
+<!--- - `trigger` → A one-time event trigger (fires without a persistent state). --->
 
 ---
 
